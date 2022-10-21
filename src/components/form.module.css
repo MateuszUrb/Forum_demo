@@ -1,0 +1,186 @@
+@import "../_colors.css";
+
+input[type="date"]:required:invalid {
+  cursor: pointer;
+  color: transparent;
+}
+
+input[type="date"]:focus {
+  color: black !important;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1rem;
+  color: var(--text);
+}
+
+.form__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40rem;
+}
+
+.form__header {
+  font-family: "Poppins", sans-serif;
+}
+
+.form__header_title {
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.form {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 2rem;
+  padding: 3rem 2rem;
+  gap: 1.7rem;
+  width: 33rem;
+  transform-style: preserve-3d;
+  box-shadow: 0 2px 3px 2px rgb(180 180 180 / 34%);
+}
+
+.form::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 150px;
+  bottom: 0;
+  left: 0;
+  transform: translate(-30%, 25%) translateZ(-1px);
+  background: url("../assets/dotPattern.png");
+}
+
+.form__controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  position: relative;
+}
+
+.form__label {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.form__controls_date {
+  display: flex;
+  gap: 3rem;
+  font-weight: 600;
+}
+
+.form__input,
+.form__input_select {
+  flex: 1;
+  font-size: 1rem;
+  padding: 0.6rem;
+  border-color: hsl(0deg 0% 0% / 0%);
+  background: var(--input_Bg);
+  border-radius: 7px;
+}
+
+.form__input_error {
+  font-size: 0.8rem;
+  color: var(--error_info);
+  font-weight: 500;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+  transform: translate(10%, calc(100% + 3px));
+}
+
+.form__dateWrapper {
+  display: flex;
+  gap: 0.8rem;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+.form__cta {
+  padding: 1rem;
+  font-size: 1rem;
+  border-color: transparent;
+  background-color: var(--green);
+  color: white;
+  letter-spacing: 1px;
+  border-radius: 0.6rem;
+  cursor: pointer;
+}
+
+.form__input_select {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: linear-gradient(
+      45deg,
+      hsl(0deg 0% 0% / 0%) 50%,
+      var(--green) 50%
+    ),
+    linear-gradient(135deg, var(--green) 50%, hsl(0deg 0% 0% / 0%) 50%);
+  background-position: calc(100% - 20px) 1em, calc(100% - 10px) 1em,
+    calc(100% - 2.5em) 0.5em;
+  background-size: 10px 10px, 10px 10px, 1px 1.5em;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+::-webkit-calendar-picker-indicator {
+  background-image: linear-gradient(
+      45deg,
+      hsl(0deg 0% 0% / 0%) 50%,
+      var(--green) 50%
+    ),
+    linear-gradient(135deg, var(--green) 50%, hsl(0deg 0% 0% / 0%) 50%);
+  background-size: 10px 10px, 10px 10px, 1px 1.5em;
+  background-repeat: no-repeat;
+  background-position: -3px 50%, 7px 50%;
+  cursor: pointer;
+}
+
+@-moz-document url-prefix() {
+  input[type="date"] {
+    background-image: linear-gradient(
+        45deg,
+        hsl(0deg 0% 0% / 0%) 50%,
+        var(--green) 50%
+      ),
+      linear-gradient(135deg, var(--green) 50%, hsl(0deg 0% 0% / 0%) 50%);
+    background-size: 10px 10px, 16px 10px, 1px 1.5em;
+    background-repeat: no-repeat;
+    background-position: 90% 49%, 97% 49%;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 768px) {
+  .form {
+    width: 80%;
+  }
+  .form__controls,
+  .form__dateWrapper {
+    gap: 0.4rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .form__controls_date {
+    flex-direction: column;
+    gap: 1.7rem;
+  }
+  .form__header_title {
+    font-size: 1.5rem;
+  }
+}

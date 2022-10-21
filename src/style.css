@@ -1,0 +1,16 @@
+@import "./_colors.css";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#app {
+  width: 100vw;
+  background-color: var(--background);
+  font-family: "Open Sans", sans-serif;
+  overflow: hidden;
+}

@@ -1,0 +1,7 @@
+:root {
+  --green: hsl(142, 79%, 28%);
+  --text: hsl(253, 9%, 20%);
+  --background: #fff;
+  --error_info: hsl(0, 58%, 60%);
+  --input_Bg: hsl(0, 9%, 94%);
+}
