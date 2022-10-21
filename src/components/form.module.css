@@ -160,7 +160,9 @@ input[type="date"]:focus {
       linear-gradient(135deg, var(--green) 50%, hsl(0deg 0% 0% / 0%) 50%);
     background-size: 10px 10px, 16px 10px, 1px 1.5em;
     background-repeat: no-repeat;
-    background-position: 90% 49%, 97% 49%;
+    background-size: 10px 10px, 10px 10px, 1px 1.5em;
+    background-position: calc(100% - 20px) 1em, calc(100% - 10px) 1em,
+      calc(100% - 2.5em) 0.5em;
     cursor: pointer;
   }
 }
