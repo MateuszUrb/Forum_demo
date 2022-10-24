@@ -48,12 +48,25 @@ export const toDateLabel = createElement(
   },
   "DO"
 );
+
 export const toDateInput = createElement("input", {
   class: style.form__input,
   type: "date",
   required: true,
   id: "toDate",
-  min: newdate,
+});
+
+fromDateInput.addEventListener("change", (e) => {
+  let value = e.target.value;
+  if (e.target.value < toDateInput.value) {
+    toDateInput.min = value;
+    toDateInput.value = "";
+  } else if (toDateInput.value < e.target.value) {
+    toDateInput.min = value;
+    toDateInput.value = "";
+  } else {
+    toDateInput.min = value;
+  }
 });
 
 export const fromDataWrapper = createElement(
